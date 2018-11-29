@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+	<title>Rishabh Mulani's Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<body>
+
+		<div class="w3-sidebar w3-bar-block w3-black w3-card" style="width:130px">
+			<h5 class="w3-bar-item">Menu</h5>
+				<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Home')">Home</button>
+				<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Projects')">Projects</button>
+				<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Resume')">Resume</button>
+		</div>
+		<div style="margin-left:130px">
+			<div id="Home" class="w3-container city w3-animate-opacity" style="display:block">
+				<div id="wrapper">
+					<section id="main">
+						<h1>Hi! I'm Rishabh Mulani</h1>
+						<img src = 'rishabhmulani.github.io/images/rm_2.jpg' style="width:100px;height:110px;">
+						<h2>Welcome to my website!</h2>
+						<p>I'm a Graduate Student in Information Management at the University of Illinois, Urbana-Champaign.
+						I'm currently looking for full time opportunities linked to Data Anlaytics and Data Science. My 
+						aim is to be a successful data-driven solutions engineer who understands real-world requirements and
+						solves problems through consultative approaches using technology.
+						Please feel free to reach out to me using the links in the footer if you found something interesting 
+						and would like to get in touch!
+						<br>Thanks for stopping by!</p>
+					</section>
+				</div>
+			</div>
+			<div id="Projects" class="w3-container city w3-animate-opacity" style="display:none">
+				<div id="wrapper">
+					<section id="main">
+						<h1>Rishabh's Projects</h1>
+						<p>This section is under renovation! Many projects are to be added soon!</p> 
+						<table class="paleBlueRows">
+							<thead>
+								<tr>
+									<th>Date</th>
+									<th>Project Name</th>
+									<th>Team Members</th>
+									<th>Details</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>October, 2018</td>
+									<td>Visualizing the Fleet Fuel Management data</td>
+									<td>Rishabh Mulani, Krzysztof Dutka, Nanyi Yang</td>
+									<td>Using the data provided to us by Urbana Public Works at PYGHACK 2018 (a 24-hour hackathon), we
+										analyzed the data and created interactive visualizations to enable exploratory analysis of the data. 
+										The jupyter notebook pertaining to this project showcases the complete interactive capability of the 
+										visualizations with various options available.
+										<br>Visit the deployed website at <u><a href="pyghack.github.io">Fleet Fuel Management project</a></u>
+										<br>Visit our Github repository pertaining to this project at <u><a href = "https://github.com/rishabhmulani/pyghack.github.io">Github repo-FFM</a></u>
+									</td>
+								</tr>
+								<tr>
+									<td>May 2018</td>
+									<td>Visualizing the Urbana Arrests dataset</td>
+									<td>Rishabh Mulani, Monica Porteanu, Ashley Hetrick, Pravesh Humane</td>
+									<td>Using publicly available data from the city of Urbana, we worked on 
+										identifying underlying patterns in the data and then 
+										telling the story behind those patterns through interesting
+										interactive visualizations. We used Plotly, Bqplot, Matplotlib and 
+										Seaborn to visualize the data. The project was well appreciated by
+										the audience and the professor (got all of us an A on the Data Visualization class)!
+										<br>Visit our Github repository pertaining to this project at <u><a href = "https://github.com/rishabhmulani/Data-Viz-Urbana-Arrests">Github repo-Urbana Arrests</a></u>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+				</div>
+			</div>
+			<div id = "Resume" class = "w3-container city w3-animate-opacity" style="display:none">
+				<div id="wrapper">
+					<section id="main">
+						<h1>Rishabh's Resume</h1>
+						<embed src="Resume-Rishabh_Mulani.pdf" width="800px" height="1100px" />
+					</section>
+				</div>
+			</div>
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/rishabh-mulani" class="fa fa-linkedin">LinkedIn</a></li>
+					<li><a href="https://github.com/rishabhmulani" class="fa fa-github">Github</a></li>
+					<li><a href="mailto:rishabh.mulani@gmail.com" class="fa fa-envelope">Email</a></li>
+					<li><a href="https://www.facebook.com/rishabh.mulani" class="fa fa-facebook">Facebook</a></li>
+				</ul>
+					Copyright © 2018 Rishabh Mulani. All Rights Reserved
+			</footer>
+		</div>
+		<script>
+		function openLink(evt, animName) {
+		  var i, x, tablinks;
+		  x = document.getElementsByClassName("city");
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("tablink");
+		  for (i = 0; i < x.length; i++) {
+		     tablinks[i].className = tablinks[i].className.replace(" w3-blue-grey", "");
+		  }
+		  document.getElementById(animName).style.display = "block";
+		  evt.currentTarget.className += " w3-blue-grey";
+		}
+		</script>
+	</body>
+</html>
